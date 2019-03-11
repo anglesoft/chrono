@@ -18,8 +18,6 @@ composer require angle/chrono
 
 ## Usage
 
-For a more detailed overview, please have a look at the test suite (/tests/ChronoTest.php).
-
 Basic usage:
 ```php
 use Angle\Chrono;
@@ -29,6 +27,13 @@ Chrono::start();
 // Do something...
 
 echo Chrono::stop(); // 4.24
+```
+
+To get formatted output, use the 'meter' method:
+```php
+Chrono::start();
+
+print Chrono::meter();
 ```
 
 You can access elapsed time whenever you need, in various formats:
@@ -55,12 +60,7 @@ sleep(1);
 print Chrono::meter(); // Time: 2 seconds (2001 ms)
 ```
 
-For a more friendly output, use the 'tell' method:
-```php
-Chrono::start();
-
-print Chrono::tell();
-```
+For a more detailed overview, please have a look at the [test suite](/tests/chronoTest.php).
 
 ## Credits
 
