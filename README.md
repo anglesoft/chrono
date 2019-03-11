@@ -1,8 +1,8 @@
 # ⏱ Chrono
 
-Helper to measure PHP code execution time.
+The easiest way to measure PHP code execution time.
 
-## Motivation
+## Introduction
 
 Every time I need to benchmark something, I find myself re-inventing the wheel and do manual time calculations. This hurts my productivity. I wanted a simple little package that is very easy to use that I can go to whenever I need to measure execution time in PHP.
 
