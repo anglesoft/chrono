@@ -18,10 +18,13 @@ composer require angle/chrono
 
 ## Usage
 
-The shortest way to benchmark your code is to use the benchmark method:
+This statement is implicitly used above any of the following examples:
 ```php
 use Angle\Chrono;
+```
 
+The shortest way to benchmark your code is to use the benchmark method:
+```php
 print Chrono::benchmark(function () {
     sleep(1);
 }); // Time: 1 second (1002 ms)
