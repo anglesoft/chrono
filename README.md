@@ -64,7 +64,7 @@ For a more detailed overview, please have a look at the [test suite](https://git
 
 ## Credits
 
-This implementation is inspired by [David Walsh](https://davidwalsh.name/php-timer-benchmark)
+This implementation is inspired by [David Walsh](https://davidwalsh.name/php-timer-benchmark)'s timer class.
 
 ## Contributing
 
@@ -74,4 +74,4 @@ Improvements are welcome! Feel free to submit pull requests.
 
 MIT
 
-Copyright © 2019 [Angle Software](https://angle.software)'s timer class.
+Copyright © 2019 [Angle Software](https://angle.software)
