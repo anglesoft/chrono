@@ -74,4 +74,4 @@ Improvements are welcome! Feel free to submit pull requests.
 
 MIT
 
-Copyright © 2019 [Angle Software](https://angle.software)
+Copyright © 2019 [Angle Software](https://angle.software)'s timer class.
