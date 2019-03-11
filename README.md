@@ -26,14 +26,14 @@ Chrono::start();
 
 // Do something...
 
-echo Chrono::stop(); // 4.24
+echo Chrono::stop(); // 2.42424242 (seconds)
 ```
 
 To get formatted output, use the 'meter' method:
 ```php
 Chrono::start();
 
-print Chrono::meter(); // Time: 0.42 seconds (4242 ms)
+echo Chrono::meter(); // Time: 0.42 seconds (4242 ms)
 ```
 
 You can access elapsed time whenever you need, in various formats:
