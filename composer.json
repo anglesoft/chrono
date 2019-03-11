@@ -1,6 +1,6 @@
 {
     "name": "angle/chrono",
-    "description": "Helper to measure PHP code execution time.",
+    "description": "The easiest way to measure PHP code execution time.",
     "type": "library",
     "license": "MIT",
     "authors": [
