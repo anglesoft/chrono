@@ -6,9 +6,9 @@ Helper to measure PHP code execution time.
 
 Every time I need to benchmark something, I find myself re-inventing the wheel and do manual time calculations. This hurts my productivity. I wanted a simple little package that is very easy to use that I can go to whenever I need to measure execution time in PHP.
 
-- Easy to remember (there are 9 methods, but you need only 2 to get what you need)
-- Only static methods and variables (because having to instanciate an object)
-
+- Easy to remember (you need only to call 2 static methods to get what you want).
+- Battle tested (have a look at the test suite)
+- It has no dependencies (can work with any framework)
 
 ## Installation
 
