@@ -18,7 +18,21 @@ composer require angle/chrono
 
 ## Usage
 
-Basic usage:
+The shortest way to benchmark your code is to use the benchmark method:
+```php
+print Chrono::benchmark(function () {
+    sleep(1);
+}); // Time: 1 second (1002 ms)
+```
+
+By default, it invokes the 'meter' method which pretty-prints the output. Optionally, you can pass a second parameter to invoke any available formatting methods (ms, seconds, minutes):
+```php
+print Chrono::benchmark(function () {
+    sleep(1);
+}, 'ms'); // 1002
+```
+
+Manual usage:
 ```php
 use Angle\Chrono;
 
@@ -32,6 +46,8 @@ echo Chrono::stop(); // 2.42424242 (seconds)
 To get formatted output, use the 'meter' method:
 ```php
 Chrono::start();
+
+// Compute stuff
 
 echo Chrono::meter(); // Time: 0.42 seconds (4242 ms)
 ```

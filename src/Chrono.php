@@ -2,6 +2,8 @@
 
 namespace Angle;
 
+use Closure;
+
 class Chrono
 {
     /** @var float */
@@ -75,11 +77,10 @@ class Chrono
 
     /**
      * Returns elapsed time in milliseconds.
-     * @param  integer $decimals
      */
-    public static function ms(int $decimals = 0): float
+    public static function ms(): int
     {
-        return round((static::elapsed() * 1000), $decimals);
+        return round((static::elapsed() * 1000), 0);
     }
 
     /**
@@ -109,6 +110,21 @@ class Chrono
         $string .= "\n";
 
         return $string;
+    }
+
+    /**
+     * Benchmarks a callback function.
+     * @param  Closure $function
+     * @param  string  $invoke
+     * @return mixed
+     */
+    public static function benchmark(Closure $callback, string $invoke = 'meter')
+    {
+        static::start();
+
+        $callback();
+
+        return static::$invoke();
     }
 
     /**

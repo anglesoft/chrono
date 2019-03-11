@@ -72,12 +72,32 @@ class ChronoTest extends TestCase
     }
 
     /** @test */
-    public function itCanTellTime()
+    public function itCanFormatTime()
     {
         Chrono::start();
 
         $string = Chrono::meter();
 
         $this->assertTrue(strpos($string, 'Time: 0 second') === 0);
+    }
+
+    /** @test */
+    public function canBenchmarkClosures()
+    {
+        $benchmark = Chrono::benchmark(function () {
+            sleep(1);
+        });
+
+        $this->assertTrue(strpos($benchmark, 'Time: 1 second') === 0);
+    }
+
+    /** @test */
+    public function canBenchmarkClosuresAndFormatTheResult()
+    {
+        $benchmark = Chrono::benchmark(function () {
+            sleep(1);
+        }, 'ms');
+
+        $this->assertTrue($benchmark >= 1000 && $benchmark <= 1100);
     }
 }
