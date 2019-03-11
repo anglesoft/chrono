@@ -60,7 +60,7 @@ sleep(1);
 print Chrono::meter(); // Time: 2 seconds (2001 ms)
 ```
 
-For a more detailed overview, please have a look at the [test suite](/tests/chronoTest.php).
+For a more detailed overview, please have a look at the [test suite](https://github.com/anglesoft/chrono/blob/master/tests/ChronoTest.php).
 
 ## Credits
 
