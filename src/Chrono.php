@@ -116,8 +116,6 @@ class Chrono
      */
     private static function now(): float
     {
-        list($usec, $sec) = explode(' ', microtime());
-
-        return (float) $usec + (float) $sec;
+        return microtime(true);
     }
 }
