@@ -9,7 +9,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Package Test Suite">
+        <testsuite name="Timer Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

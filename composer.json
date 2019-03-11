@@ -1,6 +1,6 @@
 {
-    "name": "angle/packet",
-    "description": "Composer Package Template",
+    "name": "angle/chrono",
+    "description": "Helper to measure PHP code execution time.",
     "type": "library",
     "license": "MIT",
     "authors": [
