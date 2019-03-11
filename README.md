@@ -33,7 +33,7 @@ To get formatted output, use the 'meter' method:
 ```php
 Chrono::start();
 
-print Chrono::meter();
+print Chrono::meter(); // Time: 0.42 seconds (4242 ms)
 ```
 
 You can access elapsed time whenever you need, in various formats:
