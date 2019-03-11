@@ -16,7 +16,7 @@ Every time I need to benchmark something, I find myself re-inventing the wheel a
 composer require angle/chrono
 ```
 
-## Usage
+## Documentation
 
 This statement is implicitly used above any of the following examples:
 ```php
