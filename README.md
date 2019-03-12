@@ -104,7 +104,7 @@ Output:
 Query with joints | 1.43 seconds (1424 ms)
 ```
 
-Warning: if you prefer to use the shorthand benchmark method, beware to call the describe method within your benchmark:
+Warning: if you prefer to use the shorthand benchmark method, make sure to call the describe method within your benchmark:
 ```php
 Chrono::benchmark(function () {
     Chrono::describe('Task');
