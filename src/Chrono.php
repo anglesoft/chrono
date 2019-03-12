@@ -9,6 +9,9 @@ class Chrono
     /** @var float */
     public static $start = 0, $pause = 0;
 
+    /** @var string */
+    public static $description = '';
+
     /**
      * Starts the timer.
      */
@@ -55,6 +58,7 @@ class Chrono
     public static function clear(): void
     {
         static::$start = static::$pause = 0;
+        static::$description = '';
     }
 
     /**
@@ -97,7 +101,9 @@ class Chrono
      */
     public static function meter(int $decimals = 2): string
     {
-        $string = 'Time: ';
+        $string = static::$description != '' ? static::$description . ' | ' : '';
+
+        $string .= 'Time: ';
 
         $seconds = static::seconds($decimals);
 
@@ -125,6 +131,15 @@ class Chrono
         $callback();
 
         return static::$invoke();
+    }
+
+    /**
+     * Describe your benchmark.
+     * @param  string $name
+     */
+    public static function describe(string $description = ''): string
+    {
+        return static::$description = $description;
     }
 
     /**

@@ -7,6 +7,19 @@ use Angle\Chrono;
 class ChronoTest extends TestCase
 {
     /** @test */
+    public function canDescribeBenchmarks()
+    {
+        $task = 'Micronap';
+
+        $benchmark = Chrono::benchmark(function () use ($task) {
+            Chrono::describe($task);
+            sleep(1);
+        });
+
+        $this->assertTrue(strpos($benchmark, $task) === 0);
+    }
+
+    /** @test */
     public function canStartAndStopChronometer()
     {
         Chrono::start();

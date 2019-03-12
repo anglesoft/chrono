@@ -7,7 +7,7 @@ The easiest way to measure PHP code execution time.
 Every time I need to benchmark something, I find myself re-inventing the wheel and do manual time calculations. This hurts my productivity. I wanted a simple little package that is very easy to use that I can go to whenever I need to measure execution time in PHP.
 
 - Easy to remember
-- 100% tested 
+- 100% tested
 - Framework agnostic
 - No dependencies
 
@@ -87,6 +87,30 @@ Chrono::resume();
 sleep(1);
 
 print Chrono::meter(); // Time: 2 seconds (2001 ms)
+```
+
+If you are running many benchmarks, it may be a good idea to add a description to them:
+```php
+Chrono::describe('Query with joints');
+Chrono::start();
+
+// Run the query
+
+print Chrono::meter();
+```
+
+Output:
+```
+Query with joints | 1.43 seconds (1424 ms)
+```
+
+Warning: if you prefer to use the shorthand benchmark method, beware to call the describe method within your benchmark:
+```php
+Chrono::benchmark(function () {
+    Chrono::describe('Task');
+
+    // Do your thing
+});
 ```
 
 For a more detailed overview, please refer to the [test suite](https://github.com/anglesoft/chrono/blob/master/tests/ChronoTest.php).
