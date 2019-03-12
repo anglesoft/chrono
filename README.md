@@ -6,9 +6,10 @@ The easiest way to measure PHP code execution time.
 
 Every time I need to benchmark something, I find myself re-inventing the wheel and do manual time calculations. This hurts my productivity. I wanted a simple little package that is very easy to use that I can go to whenever I need to measure execution time in PHP.
 
-- Easy to remember (you need only to call 2 static methods to get what you want).
-- 100% tested (have a look at the [test suite](https://github.com/anglesoft/chrono/blob/master/tests/ChronoTest.php))
-- It has no dependencies (can work with any framework)
+- Easy to remember
+- 100% tested 
+- Framework agnostic
+- No dependencies
 
 ## Installation
 
